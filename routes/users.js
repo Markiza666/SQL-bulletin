@@ -1,13 +1,36 @@
-// This endpoint should accept a username and email address and store them in the users table.
-app.post('/users', async (req, res) => {
-    const { username, email } = req.body;   // Extract username and email from request body
+import express from 'express';
+import pool from '../database/pool.js';  // Corrected path
+
+const router = express.Router();
+
+// POST /users
+// Creates a new user with a username and email.
+router.post('/', async (req, res) => { // Removed '/users' since it's in server.js
+    const { username, email } = req.body; 
     try {
         const result = await pool.query(
-        'INSERT INTO users (username, email) VALUES ($1, $2) RETURNING *',  // $1 and $2 are placeholders for parameterized queries. Return the inserted row, including the generated ID.
-        [username, email]
+            'INSERT INTO users (username, email) VALUES ($1, $2) RETURNING *', 
+            [username, email]
         );
         res.status(201).json(result.rows[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 });
+
+// GET /users/:id/channels
+// Fetches all channels a specific user is subscribed to.
+router.get('/:id/channels', async (req, res) => {
+    const userId = req.params.id;
+    try {
+        const result = await pool.query(
+            'SELECT c.id, c.name FROM channels c JOIN subscriptions s ON c.id = s.channel_id WHERE s.user_id = $1',
+            [userId]
+        );
+        res.status(200).json(result.rows);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+export default router;

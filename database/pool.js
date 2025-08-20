@@ -1,4 +1,6 @@
-import { Pool } from "pg";
+import pg from "pg";
+
+const { Pool } = pg;  // Destructure the Pool class from the pg module
 
 const pool = new Pool({
     user: 'postgres', 
