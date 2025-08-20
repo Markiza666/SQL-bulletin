@@ -3,4 +3,4 @@ import { Pool } from "pg";
 const app = express();
 const port = 3000;
 
-app.
+app.use(express.json());
