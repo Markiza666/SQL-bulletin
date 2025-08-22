@@ -1,6 +1,10 @@
+
 # SQL Bulletin API
 
-A RESTful API for a bulletin board application, built with **Node.js**, **Express**, and **PostgreSQL**. The API handles users, channels, messages, and subscriptions.
+A RESTful API for a bulletin bo
+# SQL-bulletin
+
+A RESTful API for a bulletin board application, built with Node.js, Express, and PostgreSQL. The API handles users, channels, messages, and subscriptions
 
 ---
 
@@ -37,6 +41,7 @@ npm install
 ```
 
 1. **Configure environment variables:**
+
     Create a `.env` file in the root directory and add your database credentials:
 
 ```env
@@ -55,6 +60,8 @@ DB_PORT=5432
 
 ```bash
 npm start
+=======
+    npm star
 ```
 
 The server will start on `http://localhost:3000`.
@@ -73,6 +80,16 @@ You can use a tool like **Insomnia** or **Postman** to interact with the API.
 | `GET`  | `/channels/:id/messages` | Fetches all messages from a specific channel, sorted by creation date. |
 | `POST` | `/subscriptions`         | Creates a new subscription between a user and a channel.               |
 | `POST` | `/messages`              | Creates a new message in one or more channels.                         |
+=======
+| Method   | Endpoint                      | Description                                             | Access  |
+| :------- | :---------------------------- | :------------------------------------------------------ | :------ |
+| `POST`   | `/users`                      | Creates a new user..                                    | Private |
+| `GET`    | `/users/:id/channels`         | Fetches all channels a specific user is subscribed to.  | Private |
+| `POST`   | `/channels`                   | Creates a new channel.                                  | Private |
+| `GET`    | `/channels/:id/messages`      | Fetches all messages from a specific channel, sorted by | Private |
+|          |                               | creation date.                                          |         |
+| `POST`   | `/subscriptions`              | Creates a new subscription between a user and a channel.| Private |
+| `POST`   | `/messages`                   | Creates a new message in one or more channels.          | Private |
 
 ---
 
