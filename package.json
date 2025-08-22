@@ -14,13 +14,21 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@types/express": "^5.0.3",
         "dotenv": "^17.2.1",
         "express": "^5.1.0",
-        "pg": "^8.16.3",
-        "typescript": "^5.9.2"
+        "pg": "^8.16.3"
     },
     "devDependencies": {
-        "@types/pg": "^8.15.5"
-    }
+        "@types/express": "^5.0.3",
+        "@types/pg": "^8.15.5",
+        "typescript": "^5.9.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Markiza666/SQL-bulletin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Markiza666/SQL-bulletin/issues"
+    },
+    "homepage": "https://github.com/Markiza666/SQL-bulletin#readme"
 }
