@@ -1,6 +1,10 @@
+
+# SQL Bulletin API
+
+A RESTful API for a bulletin bo
 # SQL-bulletin
 
-A RESTful API for a bulletin board application, built with Node.js, Express, and PostgreSQL. The API handles users, channels, messages, and subscriptions.
+A RESTful API for a bulletin board application, built with Node.js, Express, and PostgreSQL. The API handles users, channels, messages, and subscriptions
 
 ---
 
@@ -38,7 +42,7 @@ npm install
 
 1. **Configure environment variables:**
 
-Create a `.env` file in the root directory and add your database credentials:
+    Create a `.env` file in the root directory and add your database credentials:
 
 ```env
 DB_HOST=localhost
@@ -55,7 +59,9 @@ DB_PORT=5432
 1. **Start the API server:**
 
 ```bash
-    npm start
+npm start
+=======
+    npm star
 ```
 
 The server will start on `http://localhost:3000`.
@@ -66,6 +72,15 @@ The server will start on `http://localhost:3000`.
 
 You can use a tool like **Insomnia** or **Postman** to interact with the API.
 
+| Method | Endpoint                 | Description                                                            |
+|:-------|:-------------------------|:-----------------------------------------------------------------------|
+| `POST` | `/users`                 | Creates a new user.                                                    |
+| `GET`  | `/users/:id/channels`    | Fetches all channels a specific user is subscribed to.                 |
+| `POST` | `/channels`              | Creates a new channel.                                                 |
+| `GET`  | `/channels/:id/messages` | Fetches all messages from a specific channel, sorted by creation date. |
+| `POST` | `/subscriptions`         | Creates a new subscription between a user and a channel.               |
+| `POST` | `/messages`              | Creates a new message in one or more channels.                         |
+=======
 | Method   | Endpoint                      | Description                                             | Access  |
 | :------- | :---------------------------- | :------------------------------------------------------ | :------ |
 | `POST`   | `/users`                      | Creates a new user..                                    | Private |

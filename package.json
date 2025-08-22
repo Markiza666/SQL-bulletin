@@ -27,6 +27,10 @@
         "pg": "^8.16.3"
     },
     "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/pg": "^8.15.5",
+        "nodemon": "^3.1.2",
+        "typescript": "^5.9.2"
     "@types/express": "^5.0.3",
     "@types/pg": "^8.15.5",
     "nodemon": "^3.1.2",
@@ -40,4 +44,5 @@
         "url": "https://github.com/Markiza666/SQL-bulletin/issues"
     },
     "homepage": "https://github.com/Markiza666/SQL-bulletin#readme"
+  }
 }
