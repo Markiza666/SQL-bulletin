@@ -1,26 +1,43 @@
 {
     "name": "sql-bulletin",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "module": "server.js",
+    "description": "A RESTful API for a bulletin board built with Node.js, Express, and PostgreSQL. It handles users, channels, and messages with full CRUD functionality and advanced business logic.",
+    "main": "dist/server.js",
     "type": "module",
     "scripts": {
         "build": "tsc",
         "start": "npm run build && node dist/server.js",
+        "dev": "nodemon server.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "api",
+        "restful",
+        "node.js",
+        "express",
+        "typescript",
+        "postgresql",
+        "bulletin-board"
+    ],
+    "author": "your_name",
     "license": "ISC",
     "dependencies": {
-        "@types/express": "^5.0.3",
         "dotenv": "^17.2.1",
         "express": "^5.1.0",
-        "pg": "^8.16.3",
-        "typescript": "^5.9.2"
+        "pg": "^8.16.3"
     },
     "devDependencies": {
-        "@types/pg": "^8.15.5"
-    }
+        "@types/express": "^5.0.3",
+        "@types/pg": "^8.15.5",
+        "nodemon": "^3.1.2",
+        "typescript": "^5.9.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Markiza666/SQL-bulletin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Markiza666/SQL-bulletin/issues"
+    },
+    "homepage": "https://github.com/Markiza666/SQL-bulletin#readme"
 }
