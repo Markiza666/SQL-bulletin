@@ -3,9 +3,9 @@
 -- with their columns, data types, and relationships (primary and foreign keys).
 
 -- Drop existing tables in the correct order to avoid dependency errors
-DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS subscriptions;
 DROP TABLE IF EXISTS message_channels;
+DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS channels;
 DROP TABLE IF EXISTS users;
 

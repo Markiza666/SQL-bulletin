@@ -3,10 +3,10 @@ import pg from "pg";
 
 const { Pool } = pg;  // Destructure the Pool class from the pg module
 
+// Ensure all required environment variables are set
 if (!process.env.DB_HOST || !process.env.DB_USER || !process.env.DB_DATABASE || !process.env.DB_PORT) {
     throw new Error('Environment variables for database connection are missing.');
 }
-
 
 const pool = new pg.Pool({
     host: process.env.DB_HOST,
