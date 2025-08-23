@@ -31,13 +31,13 @@ git clone [https://github.com/your-username/your-project-name.git](https://githu
 cd your-project-name
 ```
 
-1. **Install dependencies:**
+2. **Install dependencies:**
 
 ```bash
 npm install
 ```
 
-1. **Configure environment variables:**
+3. **Configure environment variables:**
 
     Create a `.env` file in the root directory and add your database credentials:
 
@@ -49,11 +49,11 @@ DB_DATABASE=sql_bulletin
 DB_PORT=5432
 ```
 
-1. **Set up the database:**
+4. **Set up the database:**
     - Open **pgAdmin** and create a new database named `sql_bulletin`.
     - Run the SQL script from `setup.sql` in the query tool to create all the necessary tables.
 
-1. **Start the API server:**
+5. **Start the API server:**
 
 ```bash
 npm start
