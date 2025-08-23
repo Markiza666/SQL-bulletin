@@ -1,9 +1,6 @@
 
 # SQL Bulletin API
 
-A RESTful API for a bulletin bo
-# SQL-bulletin
-
 A RESTful API for a bulletin board application, built with Node.js, Express, and PostgreSQL. The API handles users, channels, messages, and subscriptions
 
 ---
